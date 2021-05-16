@@ -80,7 +80,7 @@
     body>div.main-container {
       display: flex;
       flex-wrap: wrap;
-      margin: 20% 15%;
+      margin: 20% 5%;
       background: var(--card-bg);
       border-radius: 15px;
       overflow: hidden;
@@ -92,9 +92,12 @@
       flex: 1 1 375px;
     }
 
-    .header,
-    .stats {
+    .header{
       color: var(--header-stats);
+    }
+
+    .accent {
+      color: var(--accent);
     }
 
     header {
@@ -117,7 +120,8 @@
     }
 
     header>picture>img {
-      filter: contrast(0.5);
+      filter: brightness(125%) contrast(75%);
+      
     }
 
     body>div.main-container>div>div {
@@ -125,15 +129,23 @@
     }
 
     body > div.main-container > div > p {
-      color: var(--main-paragraph);
+      line-height: 2em;
+    }
+    body > div.main-container > div > div.stats{
+      line-height: 2em;
     }
 
-    body > div.main-container > div > div > h1 {
-      color: var(--white) !important;
+    body > div.main-container > div > div.stats > h2 {
+      color: var(--header-stats) !important;
     }
 
-    body > div.main-container > div > div.stats {
-      color: var(--stat-headings);
+    body > div.main-container > div > div.stats > span {
+      text-transform: uppercase;
+    }
+
+    body > div.main-container > div.body-container {
+      color: var(--main-paragraph) !important;
+      padding: 0 1.75em;
     }
   </style>
 </head>
@@ -158,13 +170,13 @@
         regarding revenue, customer experience, and overall efficiency.
       </p>
       <div class="stats">
-        <h1>10k+</h1>companies
+        <h2>10k+</h2><span>companies</span>
       </div>
       <div class="stats">
-        <h1>314</h1>templates
+        <h2>314</h2><span>templates</span>
       </div>
       <div class="stats">
-        <h1>12m+</h1>queries
+        <h2>12m+</h2><span>queries</span>
       </div>
     </div>
   </div>
